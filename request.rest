@@ -1,0 +1,36 @@
+##
+GET http://localhost:5000/users
+
+##
+POST http://localhost:5000/add-users 
+Content-Type: application/json
+
+{
+    "name": "Wi wi", 
+    "email": "john@gmail.com", 
+    "password": "12ob41b4",
+    "role": "roam"
+}
+
+##
+PUT http://localhost:5000/update-users/1
+
+{
+    "name": "Wi wi", 
+    "email": "joiiiin@gmail.com", 
+    "password": "12ob41b4",
+    "role": "roam"
+}
+
+DELETE http://localhost:5000/delete-user/1
+
+
+# PATCH http://localhost:5000/users/99 
+# Content-Type: application/json
+
+# {
+#     "name": "Oiaiiio", 
+#     "email": "oiii@gmail.com", 
+#     "password": "7678587",
+#     "role": "jungle"
+# }
