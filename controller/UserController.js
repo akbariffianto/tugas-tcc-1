@@ -25,6 +25,9 @@ const updateUser = async (req, res) => {
     try {
         const inputData = req.body; //nyimpen input
         const id = req.params.id; //nyimpen id
+        if ( await User.findOne({ where: { id } }) === null) {
+            res.status(404).json({ msg: "User tidak ditemukan" });
+        }
         await User.update(inputData, {
             where: {
                 id,
@@ -41,6 +44,9 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const id = req.params.id;
+        if ( await User.findOne({ where: { id } }) === null) {
+            res.status(404).json({ msg: "User tidak ditemukan" });
+        }
         await User.destroy({
             where: {
                 id,

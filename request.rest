@@ -1,18 +1,17 @@
 ##
-GET http://localhost:5000/users
+GET http://34.135.240.157/users
 
-##
-POST http://localhost:5000/add-users 
+###
+POST http://34.135.240.157/add-users 
 Content-Type: application/json
-
 {
-    "name": "Wi wi", 
-    "email": "john@gmail.com", 
+    "name": "Wi wi wi", 
+    "email": "john@gmoojil.com", 
     "password": "12ob41b4",
-    "role": "roam"
+    "role": "jungle"
 }
 
-##
+### 
 PUT http://localhost:5000/update-users/1
 
 {
@@ -22,6 +21,7 @@ PUT http://localhost:5000/update-users/1
     "role": "roam"
 }
 
+###
 DELETE http://localhost:5000/delete-user/1
 
 
